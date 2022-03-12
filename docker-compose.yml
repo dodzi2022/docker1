@@ -13,7 +13,7 @@ services:
             - WORPRESS_DB_NAME=webserver
         ports:
             - 3009:80
-        Networks:
+        networks:
             - web
         volumes:
             - wordpressdata:/var/www/html
@@ -25,7 +25,7 @@ services:
             - MYSQL_USER=wp_user
             - MYSQL_PASSWORD=wp_password
             - MYSQL_DATABASE=webserver
-        Networks:
+        networks:
             - web
         volumes:
             - database:/var/lib/mysql
