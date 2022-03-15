@@ -4,8 +4,8 @@ services:
     wordpress:
          depends_on:
             - mysql
-         image:wordpress:4.9.4-php7.2-apache
-         container_name:wordpress
+         image: wordpress:4.9.4-php7.2-apache
+         container_name: wordpress
          environment:
             - WORDPRESS_DB_USER=root
             - WORPRESS_DB_PASSWORD=db_password
