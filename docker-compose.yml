@@ -11,23 +11,23 @@ services:
             - WORPRESS_DB_PASSWORD=db_password
             - WORPRESS_DB_HOST=mysql
             - WORPRESS_DB_NAME=webserver
-        ports:
+         ports:
             - 3009:80
-        networks:
+         networks:
             - web
-        volumes:
+         volumes:
             - wordpressdata:/var/www/html
     mysql:
-        image: mariadb:10.3.3
-        container_name: db
-        environment:
+         image: mariadb:10.3.3
+         container_name: db
+         environment:
             - MYSQL_ROOT_PASSWORD=db_password
             - MYSQL_USER=wp_user
             - MYSQL_PASSWORD=wp_password
             - MYSQL_DATABASE=webserver
-        networks:
+         networks:
             - web
-        volumes:
+         volumes:
             - database:/var/lib/mysql
 
 
