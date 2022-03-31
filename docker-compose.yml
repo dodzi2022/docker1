@@ -8,9 +8,9 @@ services:
       container_name: wordpress
       environment:
          - WORDPRESS_DB_USER=root
-         - WORPRESS_DB_PASSWORD=db_password
-         - WORPRESS_DB_HOST=mysql
-         - WORPRESS_DB_NAME=webserver
+         - WORDPRESS_DB_PASSWORD=db_password
+         - WORDPRESS_DB_HOST=mysql
+         - WORDPRESS_DB_NAME=webserver
       ports:
          - 3009:80
       networks:
